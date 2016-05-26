@@ -16,8 +16,8 @@ module.exports = {
   },
   plugins: [
     new HtmlPlugin({
-      title: 'My app title',
-      description: 'My app description',
+      title: 'todo-react',
+      description: 'A todo list application',
       template: 'app/index.hbs',
     }),
     new CleanWebpackPlugin(['build/*'], {
@@ -48,7 +48,7 @@ module.exports = {
   },
   postcss: function () {
     return [
-      require('autoprefixer'), 
+      require('autoprefixer'),
       require('postcss-import'),
       require('postcss-simple-vars'),
       require('postcss-extend'),
