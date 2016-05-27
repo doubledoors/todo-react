@@ -1,21 +1,30 @@
-// ES6 Destructuring going on here. {Component and PropTypes} - look up.
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+
+import TodoHeader from './components/TodoHeader';
+import TodoList from './components/TodoList';
+import TodoForm from './components/TodoForm';
 
 export default class TodoApp extends Component {
 
-  getInitialState: function(){
-    return {items: []};
-  },
-  updateItems: function(newItem){
-    var allItems = this.state.items.concat([newItem]);
-    this.setState({items: allItems});
-  },
+  constructor() {
+    super();
+    // set initial state
+    this.state = {
+      items: [],
+    };
+  }
+
+  updateItems = (newItem) => {
+    const allItems = this.state.items.concat([newItem]);
+    this.setState({ items: allItems });
+  }
+
   render() {
     return (
       <div>
-        <TodoBanner/>
-        <TodoList items={this.state.items}/>
-        <TodoForm onFormSubmit={this.updateItems}/>
+        <TodoHeader />
+        <TodoList items={this.state.items} />
+        <TodoForm onFormSubmit={this.updateItems} />
       </div>
     );
   }

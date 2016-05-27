@@ -3,11 +3,11 @@ require('../styles/style.scss');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import TodoApp from './TodoApp';
 
 const rootElement = document.getElementById('app');
 
 ReactDOM.render(
-  <App />,
+  <TodoApp />,
   rootElement
 );
