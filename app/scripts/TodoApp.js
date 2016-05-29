@@ -12,9 +12,12 @@ export default class TodoApp extends Component {
     this.state = {
       items: [],
     };
+
+    this.updateItems = this.updateItems.bind(this);
   }
 
-  updateItems = (newItem) => {
+  updateItems(newItem) {
+    console.log(newItem);
     const allItems = this.state.items.concat([newItem]);
     this.setState({ items: allItems });
   }

@@ -1,4 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const TodoListItem = () => <h3>{this.props.children}</h3>;
-export default TodoListItem;
+export default class TodoListItem extends Component {
+
+  render() {
+    return <h3>{this.props.children}</h3>;
+  }
+}

@@ -3,8 +3,13 @@ import TodoListItem from './TodoListItem';
 
 export default class TodoList extends Component {
 
+  constructor() {
+    super();
+    this.createItem = this.createItem.bind(this);
+  }
+
   createItem(itemText) {
-    return (<TodoListItem>{itemText}</TodoListItem>);
+    return (<TodoListItem key={Math.random()}>{itemText}</TodoListItem>);
   }
 
   render() {

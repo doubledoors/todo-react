@@ -13,7 +13,6 @@ export default class TodoForm extends Component {
 
   onChange = (e) => {
     this.setState({ item: e.target.value });
-    console.log(this.state);
   }
 
   handleSubmit = (e) => {
