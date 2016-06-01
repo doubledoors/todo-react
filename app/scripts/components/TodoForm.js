@@ -6,7 +6,7 @@ export default class TodoForm extends Component {
     return (
       <form>
         <input type="text" />
-        <input type="submit" />
+        <input type="submit" value="Add Item"/>
       </form>
     );
   }

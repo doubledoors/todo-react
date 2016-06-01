@@ -6,9 +6,12 @@ import TodoForm from './components/TodoForm';
 
 export default class TodoApp extends Component {
 
+  /* This component will hold the state for the entire app,
+  taking values from the TodoForm child component and passing it into the TodoList */
+
   constructor() {
     super();
-
+    // Set up state containing the items array
     this.state = {
       items: [],
     };
@@ -18,7 +21,7 @@ export default class TodoApp extends Component {
     return (
       <div>
         <TodoHeader />
-        <TodoList />
+        <TodoList items={this.state.items} />
         <TodoForm />
       </div>
     );
