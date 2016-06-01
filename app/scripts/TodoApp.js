@@ -6,6 +6,14 @@ import TodoForm from './components/TodoForm';
 
 export default class TodoApp extends Component {
 
+  constructor() {
+    super();
+
+    this.state = {
+      items: [];
+    };
+  }
+
   render() {
     return (
       <div>
