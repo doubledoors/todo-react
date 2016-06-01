@@ -10,7 +10,7 @@ export default class TodoApp extends Component {
     super();
 
     this.state = {
-      items: [];
+      items: [],
     };
   }
 
